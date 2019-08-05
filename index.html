@@ -157,7 +157,21 @@
                         badge: 'bottomright' // 'bottomright' or 'inline' applies to invisible.
                     },
                     defaultCountry: 'IN'
-                }
+                },
+                {
+                    provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                    authMethod: 'https://accounts.google.com',
+                    clientId: CLIENT_ID
+                },
+                {
+                    provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+                    scopes: [
+                        'public_profile',
+                        'email',
+                        'user_likes',
+                        'user_friends'
+                    ]
+                },
             ],
             // Terms of service url.
             'tosUrl': 'https://www.google.com'
